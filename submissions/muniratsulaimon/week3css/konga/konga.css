@@ -240,6 +240,7 @@ ul li{
 	line-height: 22px;
 	font-size: small;
 	font-family: calibri;
+	position: relative;
 
 	}
 	.foothead{
@@ -350,4 +351,7 @@ content: "|"}
 	width: 120px
 	border: 2px black solid;
 	
+}
+.imgs{
+	background: transparent;
 }
