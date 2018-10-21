@@ -1,0 +1,29 @@
+    10 of the new input elements introduced in HTML5 and description 
+1.   Color: This input type shows s a color picker in a predefined color, default value is black <input type="color">
+2.Date: This input type defines a date picker, it is used to select, date,month and year and gives a calender to pick from. <input type ="date">
+3. Datetime: The HTML <input type="datetime"> is a control for entering a date and time (hour, minute, second, and fraction of a second) as well as a timezone. 
+4. Datetime-Local: input element of type datetime-local create input controls that let the user easily enter both a date and a time, including the year, month, and day as well as the time in hours and minutes. 
+5. Email: The <input type="email"> defines a field for an e-mail address.The input value is automatically validated to ensure it is a properly formatted e-mail address.To define an e-mail field that allows multiple e-mail addresses, add the "multiple" attribute.
+6. Month:  The <input type="email"> defines a field for an e-mail address.The input value is automatically validated to ensure it is a properly formatted e-mail address.
+To define an e-mail field that allows multiple e-mail addresses, add the "multiple" attribute.
+7.  Number: Input elements of type "number" are used to let the user enter a number. They include built-in validation to reject non-numerical entries. 
+8. Range:The <input type="range"> defines a control for entering a number whose exact value is not important (like a slider control).Default range is 0 to 100. However, you can set restrictions on what numbers are accepted with the attributes like min,max,value,step.
+9. Search: The <input type="search"> defines a text field for entering a search string.
+10: Tel:  input elements of type "tel" are used to let the user enter and edit a telephone number. Unlike <input type="email"> and <input type="url"> , the input value is not automatically validated to a particular format before the form can be submitted, because formats for telephone numbers vary so much around the world.
+
+
+
+Differentiate between form method POST and GET.
+POST method is usually used to submit information to the server. post method doesn't display the information on the browser. HTTP POST requests supply additional data from the client (browser) to the server in the message body. 
+POST requests are never cached
+POST requests do not remain in the browser history
+POST requests cannot be bookmarked
+POST requests have no restrictions on data length
+WHILE
+GET method is mostly used for queries on the server and display its queries on the browser as part of the url.
+GET requests can be cached
+GET requests remain in the browser history
+GET requests can be bookmarked
+GET requests should never be used when dealing with sensitive data
+GET requests have length restrictions
+GET requests is only used to request data (not modify).
