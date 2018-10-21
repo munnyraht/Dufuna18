@@ -14,18 +14,18 @@
         .inputs{ padding: 10px;}
         label{ font-weight: 800; font-size: 1.2rem; color: #218ed6;}
         input[type=text],input[type=email],input[type=password],input[type=text],input[type=tel],input[type=date], select {background:  #f1f1f1; width: 100%;padding: 15px; border: none; }
-        button{ color;font-size: 1.1rem; padding:2px; margin:2px;}
+        input[type=submit]{ color: black; font-size: 1.1rem; padding:2px; margin:none; border:none; background-color:blue;}
 
     
     </style>
     </head>
     <body>
-<form> 
+<form action="process.php" method="POST" enctype="multipart/form-data"> 
 <fieldset>
     <legend> SignUp Form</legend>
     <br>
-<div class="inputs">   <label for="firstname"> First Name<label> <input type="text" name="Fullname" id="firstname"> </div> 
-<div class="inputs">  <label for="lastname"> Last Name<label> <input type="text" name="lastname" id="firstname"> </div> 
+<div class="inputs">   <label for="firstname"> First Name<label> <input type="text" name="firstname" id="firstname"> </div> 
+<div class="inputs">  <label for="lastname"> Last Name<label> <input type="text" name="lastname" id="lasttname"> </div> 
 <div class="inputs"> <label>Gender</label> <input type="radio" name="gender" id="female" value="female"> <label for="female">Female</label>
                                              <input type="radio" name="gender" id="male" value="male"> <label for="male">Male</label> </div> 
 
@@ -40,7 +40,7 @@
 <div class="inputs"> <label for="Password">Password</label> <input type="password" id="password" name="password"> </div>
 <div class="inputs"> <label for="rePassword"> Confirm Password</label> <input type="password" id="rePassword" name="rePassword" > </div>
 
-<div class="inputs"><button onclick="alert('Information sucessfuly submitted for signup')">Sign Up</button> </div>
+<div class="inputs"><input type="Submit" value="Sign Up"></div>
     
 
 
