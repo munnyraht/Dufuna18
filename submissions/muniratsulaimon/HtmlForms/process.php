@@ -23,13 +23,13 @@ header('Location:sucess.html' );
     //conect to database signup
     $conn= mysqli_connect( $servername,$username,$pasword,$databasename);
         if (!$conn){
-            die( "connection failed" . "mysql connect error");
+            die( "connection failed" . mysqli_connect_error());
         }
-    $query = "INSERT into users( firstname, lastname,gender,email,phoneno,dateofbirth,country,password,confirmpassword,created_date)
+    $query = "INSERT INTO users( firstname, lastname,gender,email,phoneno,dateofbirth,country,password,confirmpassword,created_date)
                           VALUES('$fname','$lname','$gender','$email','$phoneno','$dob','$country','$password','$repassword', NOW())";
-    $result =mysqli_query( $conn,$query);
+   $result =mysqli_query( $conn,$query);
      if (!$result){ 
-         die( "Error :" .$query. mysqli_error($conn) );
+        die("Error: " . $query . "<br>" . mysqli_error($conn));
      }
  //close connection
  mysqli_close($conn);
