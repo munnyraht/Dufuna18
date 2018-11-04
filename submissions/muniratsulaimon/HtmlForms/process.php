@@ -1,4 +1,5 @@
-<?php
+<?php 
+$message='';
 $fname=$_POST["firstname"];
 $lname=$_POST["lastname"];
 $gender=$_POST["gender"];
@@ -8,11 +9,10 @@ $dob=$_POST["dob"];
 $country=$_POST["country"];
 $password=$_POST["password"];
 $repassword=$_POST["rePassword"];
- 
+
+
 savetodatabase( $fname,$lname,$gender,$email,$phoneno,$dob,$country,$password,$repassword);
 header('Location:sucess.html' );
-
- 
 
 //function definition of savetodatabase
  function savetodatabase( $fname,$lname,$gender,$email,$phoneno,$dob,$country,$password,$repassword){
@@ -20,7 +20,7 @@ header('Location:sucess.html' );
     $databasename ="Signup";
     $username="root";
     $pasword="";
-    //conect to database signup
+    //connect to database signup
     $conn= mysqli_connect( $servername,$username,$pasword,$databasename);
         if (!$conn){
             die( "connection failed" . mysqli_connect_error());
@@ -31,10 +31,9 @@ header('Location:sucess.html' );
      if (!$result){ 
         die("Error: " . $query . "<br>" . mysqli_error($conn));
      }
- //close connection
+ //close connection 
  mysqli_close($conn);
 
+} 
 
-
-
-}
+?>

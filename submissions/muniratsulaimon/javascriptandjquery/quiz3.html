@@ -5,7 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Page Title</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <script src="js/jquery-3.3.1.min.js""></script>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script> 
+    $(document).ready(function(){
+     $('#add').click(function(){
+            var wish=$('#textfield').val();
+            $('#list').append ( '<li>' + wish + '</li>');
+            $('input:text').val("");
+   } 
+       ) 
+}); 
+    </script>
     
 </head>
 <body>
@@ -16,14 +26,6 @@
     <ul id="list">
     </ul>
 </div>
-         <script>
-         $('#add').click(function(){
-             var wish=$('#textfield').val();
-             $('#list').append(wish + '<br>');
-             $('input:text').val("");
-         
-    } 
-        );
-               </script>
+       
 </body>
 </html>

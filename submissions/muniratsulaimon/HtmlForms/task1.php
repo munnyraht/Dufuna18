@@ -1,3 +1,30 @@
+<?php
+if (isset($_POST['submit'])){
+$message='';
+$fname=$_POST["firstname"];
+$lname=$_POST["lastname"];
+$gender=$_POST["gender"];
+$email=$_POST["email"];
+$phoneno=$_POST["phoneno"];
+$dob=$_POST["dob"];
+$country=$_POST["country"];
+$password=$_POST["password"];
+$repassword=$_POST["rePassword"];
+
+if ( empty($fname) || empty($lname) || empty($gender) || empty($email) || empty($phoneno) || empty($dob) || empty($country) || empty($password) || empty($repassword)){
+    $message = ' <p class="error"> All fields are required  </p>';
+}
+if ((!is_numeric($phoneno))){
+    $message .=  ' <p class="error"> Phone no must be numeric </p>';
+}
+if ( $password != $repassword){
+    $message .= ' <p class="error">password does not match </p>';
+} 
+if ( empty($message)){
+    $message = '<p class="success"> All input are valid </p>';
+}
+}
+?>
 <!Doctype html>
 <html>
     <head>
@@ -18,15 +45,19 @@
         .error{ 
             color:red;
         }
+        .success{
+            color:green;
+        }
     </style>
     <!--<script src="FormValidation\validation.js"> </script> -->
     </head>
     <body>
-<form action="process.php" method="POST" enctype="multipart/form-data" onsubmit="return formvalidation()" name="Signup"> 
+<form action="" method="POST" enctype="multipart/form-data" onsubmit="return formvalidation()" name="Signup"> 
 <fieldset>
     <legend> SignUp Form</legend>
     <br>
-    <?php echo ('<p class ="error">' $message '</p>' ?>
+
+    <?php echo  $message ?>
 <div class="inputs">   <label for="firstname"> First Name<label> <input type="text" name="firstname" id="firstname"> </div> 
 <div class="inputs">  <label for="lastname"> Last Name<label> <input type="text" name="lastname" id="lasttname"> </div> 
 <div class="inputs"> <label>Gender</label> <input type="radio" name="gender" id="female" value="female"> <label for="female">Female</label>
