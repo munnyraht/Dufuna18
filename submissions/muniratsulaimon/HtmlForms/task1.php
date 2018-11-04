@@ -49,7 +49,7 @@ if ( empty($message)){
             color:green;
         }
     </style>
-    <!--<script src="FormValidation\validation.js"> </script> -->
+    <script src="FormValidation\validation.js"> </script>
     </head>
     <body>
 <form action="" method="POST" enctype="multipart/form-data" onsubmit="return formvalidation()" name="Signup"> 
