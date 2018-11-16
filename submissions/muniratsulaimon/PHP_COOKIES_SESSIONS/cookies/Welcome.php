@@ -1,4 +1,29 @@
 <?php
+//connect to database signup
+$conn= mysqli_connect("localhost:810","root"," ","Signup");
+if (!$conn){
+    die( "connection failed" . mysqli_connect_error());
+}
+$email=$_COOKIE['email'];
+$query= "SELECT * FROM user WHERE email= '$email'" ;
+$result= mysqli_query($conn,$query);
+    while($row=mysqli_fetch_asso($result)){
+        $fname =$row['firstname'];
+        $lname=$row['lastname'];
+        $gender=$row['gender'];
+        $email=$row["email"];
+        $phoneno=$row["phoneo"];
+        $dob=$row["dateofbirth"];
+        $country=$row["country"];
+    }
+        setcookie("firstname",$fname,time()+3600,"/","",0);
+        setcookie("lastname",$lname,time()+3600,"/","",0);
+        setcookie("gender",$gender,time()+3600,"/","",0);
+        setcookie("phoneno",$phoneno,time()+3600,"/","",0);
+        setcookie("dob",$dob,time()+3600,"/","",0);
+        setcookie("country",$country,time()+3600,"/","",0);
+
+   }
    
     ?>
 

@@ -7,39 +7,28 @@
         $msg= "email and password required";
     }
     else{ 
-     //connect to database signup
-     $conn= mysqli_connect("localhost:810","root"," ","Signup");
-     if (!$conn){
-         die( "connection failed" . mysqli_connect_error());
-     }
-     $query= "SELECT firstname, lastname,gender,email,phoneno,dateofbirth,country FROM user WHERE email= '$email'" ;
-     $result= mysqli_query($conn,$query);
-     if (mysqli_num_rows($result)==0){ 
-         $msg='invalid login Credentials';
-     }
-     else {
-         while($row=mysqli_fetch_asso($result)){
-             $fname =$row['firstname'];
-             $lname=$row['lastname'];
-             $gender=$row['gender'];
-             $email=$row["email"];
-             $phoneno=$row["phoneo"];
-             $dob=$row["dateofbirth"];
-             $country=$row["country"];
-             setcookie("firstname",$fname,time()+3600,"/","",0);
-             setcookie("lastname",$lname,time()+3600,"/","",0);
-             setcookie("gender",$gender,time()+3600,"/","",0);
-             setcookie("email",$email,time()+3600,"/","",0);
-             setcookie("phoneno",$phoneno,time()+3600,"/","",0);
-             setcookie("dob",$dob,time()+3600,"/","",0);
-             setcookie("country",$country,time()+3600,"/","",0);
-             header('location:Welcome.php');
-         }
-        }
-           
+        //connect to database signup
+        $conn= mysqli_connect("localhost:810","root"," ","Signup");
+        if (!$conn){
+            die( "connection failed" . mysqli_connect_error());
+        
+        $query= "SELECT * FROM user WHERE email= '$email'" ;
+        $result= mysqli_query($conn,$query);
+        if (mysqli_num_rows($result)==0){ 
+            $msg='invalid login Credentials';
+            }  
+        else{
+        //uncomment the session section and comment the cookie section to use session and vice versa
+        //using cookie 
+        setcookie("email",$email,time()+3600,"/","",0);
+        setcookie("password",$password,time()+3600,"/","",0);
+        header('Location:cookies/Welcome.php');
+        //using session
+       /* session["email"]= $email;
+        session["password"]=$password;
+        header('Location:sessions/welcome.php');*/
       }
     }
-    
      
     
 ?>
