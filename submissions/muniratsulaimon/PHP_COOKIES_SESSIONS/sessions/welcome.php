@@ -1,34 +1,5 @@
 <?php
-session_start();
-//connect to database signup
-$conn= mysqli_connect("localhost:810","root"," ","Signup");
-if (!$conn){
-    die( "connection failed" . mysqli_connect_error());
-}
-$email=Session['email'];
-$query= "SELECT * FROM user WHERE email= '$email'" ;
-$result= mysqli_query($conn,$query);
-if (mysqli_num_rows($result)==0){ 
-    $msg='invalid login Credentials';
-}
-else {
-    while($row=mysqli_fetch_asso($result)){
-        $fname =$row['firstname'];
-        $lname=$row['lastname'];
-        $gender=$row['gender'];
-        $phoneno=$row["phoneno"];
-        $dob=$row["dateofbirth"];
-        $country=$row["country"];
-    }
-        session["firstname"]=$fname;
-        session["lastname"]=$lname;
-        session['gender']=$gender;
-        session["phoneno"]=$phoneno;
-        session["dob"]=$dob;
-        session["country"]=$country;
 
-   }
-   
     ?>
 
     <html>
