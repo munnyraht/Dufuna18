@@ -16,12 +16,12 @@ header('Location:sucess.html' );
 
 //function definition of savetodatabase
  function savetodatabase( $fname,$lname,$gender,$email,$phoneno,$dob,$country,$password,$repassword){
-    $servername="localhost:810";
+    $servername="localhost";
     $databasename ="Signup";
     $username="root";
-    $pasword="";
+    $pasword=" ";
     //connect to database signup
-    $conn= mysqli_connect( $servername,$username,$pasword,$databasename);
+    $conn= mysqli_connect($servername,$username,$pasword,$databasename);
         if (!$conn){
             die( "connection failed" . mysqli_connect_error());
         }

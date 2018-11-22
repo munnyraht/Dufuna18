@@ -22,11 +22,11 @@
     <!--<script src="FormValidation\validation.js"> </script> -->
     </head>
     <body>
-<form action="process.php" method="POST" enctype="multipart/form-data" onsubmit="return formvalidation()" name="Signup"> 
+<form action="process.php" method="POST" enctype="multipart/form-data" action="process.php" name="Signup"> 
 <fieldset>
     <legend> SignUp Form</legend>
     <br>
-    <?php echo ('<p class ="error">' $message '</p>' ?>
+   
 <div class="inputs">   <label for="firstname"> First Name<label> <input type="text" name="firstname" id="firstname"> </div> 
 <div class="inputs">  <label for="lastname"> Last Name<label> <input type="text" name="lastname" id="lasttname"> </div> 
 <div class="inputs"> <label>Gender</label> <input type="radio" name="gender" id="female" value="female"> <label for="female">Female</label>
