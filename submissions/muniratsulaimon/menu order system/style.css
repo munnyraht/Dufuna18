@@ -1,0 +1,109 @@
+html,body{
+  height: 100%;
+  width: 100%;
+  font-family: 'poppins' , sans-serif;
+  color: #222;
+}
+.food-icon{
+    font-size: 5rem;
+  }
+  .red{
+    color:red;
+  }
+  .blue{
+    color:blue;
+  }
+  .purple{
+    color:purple;
+  }
+  .orange{
+    color:orangered;
+  }
+  .brown{
+    color:brown;
+  }
+  footer{
+background-color: #3f3f3f;
+color: #d5d5d5;
+padding-top: 2rem;
+}
+hr.light{
+border-top: 1px solid #d5d5d5;
+width: 75%;
+margin-top: .8rem;
+margin-bottom:1rem;
+}
+footer a{
+color: #d5d5d5;
+}
+hr.light-100{
+width: 100%;
+border-top: 1px solid #d5d5d5;
+margin-top: .8rem;
+margin-bottom:1rem;
+}
+.carousel-caption{
+position: absolute;
+top: 50%;
+transform: translateY(-50%);
+}
+.carousel-caption h1{
+font-size: 500%;
+text-transform: uppercase;
+text-shadow: 1px 1px 15px #000;
+font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.carousel-caption h3{
+font-size: 200%;
+font-weight: 500;
+text-shadow: 1px 1px 10px #000;
+padding-bottom: 1rem;
+color:rgb(235, 12, 168);
+font-style: italic;
+}
+.contactimg{
+  background-image: url('images/background3.jpeg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+.orderimg{
+  background-image: url('images/background5.jpeg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+.amountbox{
+  margin:2px solid pink;
+  padding:3px;
+}
+@media (max-width: 768px) {
+  .carousel-caption{
+    top: 45%;
+  }
+  .carousel-caption h1{
+    font-size: 350%;
+  }
+  .carousel-caption h3{
+    font-size: 140%;
+    font-weight: 400;
+  padding-bottom: .2rem;
+  }
+}
+@media (max-width: 576px) {
+  .carousel-caption{
+    top: 40%;
+  }
+  .carousel-caption h1{
+    font-size: 250%;
+  }
+  .carousel-caption h3{
+    font-size: 110%;
+  }
+  .carousel-indicators{
+    display: none;
+  }
+}
+.success{
+  color:green;
+}
