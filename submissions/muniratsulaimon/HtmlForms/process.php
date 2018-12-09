@@ -25,7 +25,7 @@ header('Location:sucess.html' );
         if (!$conn){
             die( "connection failed" . mysqli_connect_error());
         }
-    $query = "INSERT INTO users( firstname, lastname,gender,email,phoneno,dateofbirth,country,password,confirmpassword,created_date)
+    $query =  "INSERT INTO users( firstname, lastname,gender,email,phoneno,dateofbirth,country,password,confirmpassword,created_date)
                           VALUES('$fname','$lname','$gender','$email','$phoneno','$dob','$country','$password','$repassword', NOW())";
    $result =mysqli_query( $conn,$query);
      if (!$result){ 
