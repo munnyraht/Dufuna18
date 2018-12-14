@@ -9,7 +9,7 @@ include('header.php')
                      <img class="d-block w-100 h-100" src="images/firstslide.jpeg" alt="First slide">
                      <div class="carousel-caption">
                       <h1 class="display-2">Talia's Kitchen </h1>
-                      <h3>Deliveriing to your door step! </h3>
+                      <h3>Delivering to your door step! </h3>
                     </div>
                    </div>
                    

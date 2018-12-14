@@ -16,8 +16,8 @@ $dbname="talia_kitchen";
  $conn= mysqli_connect($server,$user,$pass,$dbname); 
  if ($conn){
      //insert entered delivery details into db
-   $query= "INSERT INTO orders (`name`, `phoneno`, `email`, `location`, `mealname`, `mealamount`, `no_of_packs`, `total_amount`, `order_time`) 
-                        VALUES ('{$name}','{$phoneno}','{$email}','{$location}','{$mealname}','{$mealamount}','{$noofpacks}','{$total}',CURRENT_TIMESTAMP)";
+   $query= "INSERT INTO orders (`name`, `phoneno`, `email`, `location`, `mealname`, `mealamount`, `no_of_packs`, `total_amount`, `order_time`,`Resolved`) 
+                        VALUES ('{$name}','{$phoneno}','{$email}','{$location}','{$mealname}','{$mealamount}','{$noofpacks}','{$total}',CURRENT_TIMESTAMP,'unchecked')";
    $result =mysqli_query( $conn,$query);
    if ($result){ 
   echo("<div class='alert alert-success'> <strong> Details submitted successfully!</strong></div>");
@@ -28,10 +28,6 @@ $dbname="talia_kitchen";
 //close connection 
 mysqli_close($conn);
 }
-
-
-
-
 
 ?>
 <div class="text-left p-5"> <h2>  Order Sucessful! </h2>

@@ -13,9 +13,6 @@ if(isset($_POST['submit'])){
     $_SESSION['location'] = $location;
     if ( empty($name) || empty($email) || empty($phoneno) || empty($location)) {
         $message = ' <p class="red"> All fields are required </p>';
-    } 
-    elseif(empty($itemno)){
-        $message = ' <p class="red"> Enter no of packs and press Go </p>';
     }
     elseif ((!is_numeric($phoneno))){
         $message .=  ' <p class="red"> Phone no must be numeric </p>';
@@ -69,7 +66,12 @@ include('header.php');
             </div>
             <div class="text-center p-3 blue">
                 <?php 
+            //Default values
                 $totalamount='';
+                $_SESSION['itemno']=1;
+                $amount=$_SESSION['mealamount'];
+                $totalamount= $amount * $_SESSION['itemno'];
+                $_SESSION['totalamount']= $totalamount;
                 if(isset($_POST['go'])){
                     $_SESSION['itemno'] = $_POST['itemno'];
                     $itemno=intval($_POST['itemno']);
